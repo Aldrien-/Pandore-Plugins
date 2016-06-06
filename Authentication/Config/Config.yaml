@@ -1,0 +1,19 @@
+# Whether the plugin is enabled.
+IsEnabled: true
+# Define the name of the default group.
+DefaultGroup: Guest
+
+Modules:
+  # Permissions for the Foo Module.
+  FooModule:
+    actions:
+      # Permissions for the default action.
+      default:
+        authorized: [Member]
+      # Permissions for the foo action.
+      fooAction:
+        unauthorized: [Guest, Banned]
+    # Default permissions for the Foo Module.
+    permissions:
+      authorized: [Member]
+      unauthorized: [Banned]
